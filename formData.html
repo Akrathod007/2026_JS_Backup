@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    First Name :
+    <input type="text" name="" id="fName" />
+    <br />
+    <br />
+    Email :
+    <input type="email" id="email" />
+    <br />
+    <br />
+    <select name="" id="country">
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+      <option value="UK">UK</option>
+    </select>
+    <br /><br />
+    Gender :
+    <input type="radio" name="gender" value="Male" />Male
+    <input type="radio" name="gender" value="Female" />Female <br /><br />
+    Hobbies :
+    <input type="checkbox" name="hobbies" value="Reading" />Reading
+    <input type="checkbox" name="hobbies" value="Travelling" />Travelling
+    <input type="checkbox" name="hobbies" value="Cricket" />Cricket
+    <input type="checkbox" name="hobbies" value="Browsing Net" />Browsing Net
+    <br /><br />
+    Address :
+    <textarea name="" id="address" cols="20"></textarea>
+    <br><br>
+    <input type="button" value="Submit" onclick="submitData()" />
+
+    <div id="firstNamePrint"></div>
+    <div id="emailPrint"></div>
+    <div id="countryPrint"></div>
+    <div id="genderPrint"></div>
+    <div id="hobbiesPrint"></div>
+    <div id="addressPrint"></div>
+  </body>
+  <script>
+    let fName = document.getElementById("fName");
+    console.log(fName);
+    let email = document.getElementById("email");
+    let country = document.getElementById("country");
+    let fNamePrint = document.getElementById("firstNamePrint");
+    let emailPrint = document.getElementById("emailPrint");
+    let countryPrint = document.getElementById("countryPrint");
+    let gender = document.getElementsByName("gender");
+    let genderPrint = document.getElementById("genderPrint");
+    let hobbies = document.getElementsByName("hobbies");
+    let hobbiesPrint = document.getElementById("hobbiesPrint");
+    let hobbySum = "";
+    let address = document.getElementById("address")
+    let addressPrint = document.getElementById("addressPrint")
+    function submitData() {
+      console.log(fName.value);
+      console.log(email.value);
+      console.log(country.value);
+      console.log(gender[0].value);
+      console.log(hobbies);
+
+      // document.write(fName.value)
+      // fNamePrint.innerText = "<b>First Name :</b> "+ fName.value
+      fNamePrint.innerHTML = "<b>First Name :</b> " + fName.value;
+      emailPrint.innerHTML = "<b>Email : </b> " + email.value;
+      countryPrint.innerHTML = "<b>Country : </b>" + country.value;
+      if (gender[0].checked) {
+        genderPrint.innerHTML = "<b>Gender : </b>" + gender[0].value;
+      }
+      if (gender[1].checked) {
+        genderPrint.innerHTML = "<b>Gender : </b>" + gender[1].value;
+      }
+
+      if (hobbies[0].checked) {
+        // hobbiesPrint.innerHTML = "<b>Hobbies : </b>" + hobbies[0].value;
+        hobbySum = hobbies[0].value;
+      }
+      if (hobbies[1].checked) {
+        // hobbiesPrint.innerHTML = "<b>Hobbies : </b>" + hobbies[1].value;
+        hobbySum += "," + hobbies[1].value;
+      }
+      if (hobbies[2].checked) {
+        // hobbiesPrint.innerHTML = "<b>Hobbies : </b>" + hobbies[2].value;
+        hobbySum += "," + hobbies[2].value;
+      }
+      if (hobbies[3].checked) {
+        // hobbiesPrint.innerHTML = "<b>Hobbies : </b>" + hobbies[3].value;
+        hobbySum += "," + hobbies[3].value;
+      }
+
+      hobbiesPrint.innerHTML = "<b>Hobbies : </b>" + hobbySum;
+      addressPrint.innerHTML = "<b>Address : </b>"+address.value
+    }
+  </script>
+</html>

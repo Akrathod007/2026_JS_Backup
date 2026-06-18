@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function clikeMe(){
+            alert("Click Me!!")
+        }
+        function h1Fun(){
+            alert("H1 clicked")
+        }
+        function submitForm(){
+            // console.log(document);
+            // console.log(document.form);
+            console.log(document.form.fName.value);
+            console.log(document.form.email.value);
+            console.log(document.form.country.value);
+            
+            let fName = document.form.fName.value;
+            let email = document.form.email.value;
+            let country = document.form.country.value;
+            let result = document.getElementById("result")
+            console.log(result);
+            
+            // result.innerText = "<b>FirstName :</b> "+fName+"\nEmail : "+email+"\nCountry : "+country;
+            result.innerHTML = "<b>FirstName :</b> "+fName+"<br><b>Email : </b>"+email+"<br><b>Country :</b>"+country;
+
+
+        }
+    </script>
+</head>
+<body>
+    <!-- <button onclick="clikeMe()">Click Me!!</button>
+    <h1 onclick="h1Fun()">Heading 1</h1>
+    -->
+
+    <form name="form">
+        <label for="">Enter a First Name : </label>
+        <input type="text" name="fName">
+        <!-- <input type="email" value="demo@gmail.com" disabled> -->
+         <input type="email" name="email">
+         <select name="country" id="">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+         </select>
+        <button onclick="submitForm()" type="button">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+</body>
+</html>

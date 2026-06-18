@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // alert("Hello")
+        // let x = confirm("Are You Indian?")
+        // console.log(x);
+        
+        // let y = parseInt(prompt("Enter a number : "))
+        // console.log(y);
+        // console.log(typeof y);
+        
+        // let no1 = parseInt(prompt("Enter a number 1 :"))
+        // let no2 = parseInt(prompt("Enter a number 2 :"))
+
+        // console.log("Addition :"+(no1 + no2));
+        // console.log("Subtraction : "+(no1 - no1));
+        // console.log("Multiplication : "+(no1 * no2));
+        // console.log("Division : ",parseInt((no1 / no2)));
+        // console.log("Modules : ",(no1 % no2));
+        // console.log("Exponent : ",(no1 ** no2));
+        
+        //Types of conditional Statements :
+        //1 -> Only if
+        //2 -> if .. else
+        //3 -> ladder if else 
+        //4 -> nested if else
+        //5 -> multiple ifs
+        //6 -> Switch case
+
+        // let no = parseInt(prompt("Enter a number : "))
+
+        // if(no > 0){
+        //     console.log("POSITIVE");
+        // }
+
+        // if(no > 0){
+        //     console.log("Positive");
+        // }
+        // else{
+        //     console.log("Negative");
+        // }
+
+        // let per = parseInt(prompt("Enter a percentage : "))
+
+        // if(per >= 90){
+        //     console.log("Grade A");
+        // }
+        // else if(per >= 80){
+        //     console.log("Grade B");
+        // }
+        // else if(per >= 70){
+        //     console.log("Grade C");
+        // }
+        // else if(per >=60){
+        //     console.log("Grade D");
+        // }
+        // else if(per >= 50){
+        //     console.log("Grade E");
+        // }
+        // else{
+        //     console.log("Fail");
+            
+        // }
+
+        //code
+
+        // let age = parseInt(prompt("Enter a age : "))
+        // let voterId = prompt("You have VoterID Card?Ans in Y or N")
+
+        // if(age >= 18){
+        //     if(voterId == 'Y'){
+        //         console.log("You Can Vote");
+        //     }
+        //     else{
+        //         console.log("You Can't Vote");
+        //     }
+        // }
+        // else{
+        //     console.log("You Can't Vote");
+            
+        // }
+
+        /*
+            amt -> 1260
+            n500 -> 2 -> 1260 - 1000 -> 260
+            n100 -> 2 -> 260 - 200 -> 60
+            n50  -> 1 -> 60 - 50 -> 10
+            n20  -> 0
+            n10  -> 1 -> 10 - 10 -> 0
+            n5  -> 0
+            n2  -> 0
+            n1 -> 0
+
+            no = 100 / 5 -> 20
+            n5
+
+        */
+
+        // let amt = parseInt(prompt("Enter a Amount : ")); //1260
+        // let n500 = n100 = n50 = n20 = n10 = n5 = n2 = n1 = 0;
+
+        // if(amt >= 500){
+        //     n500 = parseInt(amt / 500) //5
+        //     amt = amt - n500 * 500
+        // }
+        // if(amt >= 100){
+        //     n100 = parseInt(amt / 100)
+        //     amt = amt - n100 * 100
+        // }
+        //  if(amt >= 50){
+        //     n50 = parseInt(amt / 50)
+        //     amt = amt - n50 * 50
+        // }
+        //  if(amt >= 20){
+        //     n20 = parseInt(amt / 20)
+        //     amt = amt - n20 * 20
+        // }
+        //  if(amt >= 10){
+        //     n10 = parseInt(amt / 10)
+        //     amt = amt - n10 * 10
+        // }
+        //  if(amt >= 5){
+        //     n5 = parseInt(amt / 5)
+        //     amt = amt - n5 * 5
+        // }
+        //  if(amt >= 2){
+        //     n2 = parseInt(amt / 2)
+        //     amt = amt - n2 * 2
+        // }
+        //  if(amt >= 1){
+        //     n1 = parseInt(amt / 1)
+        //     amt = amt - n1 * 1
+        // }
+
+        // console.log("N500 : "+n500);
+        // console.log("N100 : "+n100);
+        // console.log("N50 : "+n50);
+        // console.log("N20 : "+n20);
+        // console.log("N10 : "+n10);
+        // console.log("N5 : "+n5);
+        // console.log("N2 : "+n2);
+        // console.log("N1 : "+n1);
+
+        // let day = parseInt(prompt("Enter a day number : "))
+
+        // switch(day){
+        //     case 1:console.log("MON");
+        //         break;
+        //     case 2:console.log("TUE");
+        //         break;
+        //     case 3:console.log("WED");
+        //         break;
+        //     case 4:console.log("THU");
+        //         break;
+        //     case 5:console.log("FRI");
+        //         break;
+        //     case 6:console.log("SAT");
+        //         break;
+        //     case 7:console.log("SUN");
+        //         break;
+        //     default:console.log("Invalid Day NUmber")
+        // }
+
+        // let ch = prompt("Enter a character : ")
+
+        // switch(ch){
+        //     case 'A':
+        //     case 'a':
+        //     case 'E':
+        //     case 'e':
+        //     case 'I':
+        //     case 'i':
+        //     case 'O':
+        //     case 'o':
+        //     case 'U':
+        //     case 'u':console.log("Vowel")
+        //         break;
+        //     default:console.log("Not Vowel")
+        // }
+
+        let fruit = prompt("Enter a fruit Name : ")
+
+        switch(fruit){
+            case "Apple":
+            case "Banana":
+            case "Kiwi":
+            case "Mango":
+            case "Watermelon":console.log("It is Fruit")
+                break;
+            default:console.log("It is not Fruit")
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
